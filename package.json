@@ -1,0 +1,59 @@
+{
+  "name": "jekyll-webpack",
+  "version": "1.0.0",
+  "description": "A boilerplate with Jekyll and Webpack",
+  "author": "Cesar Denis <cesar@cesardenis.com>",
+  "homepage": "https://github.com/CesarDenis/jekyll-webpack#readme",
+  "keywords": [
+    "boilerplate",
+    "jekyll",
+    "scaffold",
+    "static",
+    "static-site",
+    "site",
+    "web",
+    "webpack",
+    "website"
+  ],
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "lint": "eslint assets/scripts/**/*.js",
+    "start": "concurrently -k -n \"webpack, jekyll\" -c \"bgBlue, bgRed\" \"npm run watch\" \"bundle exec jekyll serve\"",
+    "watch": "webpack --watch --mode development --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CesarDenis/jekyll-webpack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CesarDenis/jekyll-webpack/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.4",
+    "babel-preset-env": "1.6.1",
+    "clean-webpack-plugin": "0.1.19",
+    "concurrently": "3.5.1",
+    "copy-webpack-plugin": "4.5.1",
+    "css-loader": "0.28.11",
+    "eslint": "4.19.1",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-plugin-prettier": "2.6.0",
+    "mini-css-extract-plugin": "0.4.0",
+    "node-sass": "4.8.3",
+    "postcss-import": "11.1.0",
+    "postcss-loader": "2.1.4",
+    "postcss-scss": "1.0.5",
+    "prettier": "1.12.1",
+    "sass-loader": "7.0.1",
+    "style-loader": "0.21.0",
+    "url-loader": "1.0.1",
+    "webpack": "4.6.0",
+    "webpack-cli": "2.0.14"
+  },
+  "license": "MIT"
+}
